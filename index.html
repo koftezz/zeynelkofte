@@ -51,6 +51,7 @@
             padding: 80px 20px;
         }
         
+        /* For when actual logo image is added */
         .hero-logo {
             max-width: 500px;
             width: 90%;
@@ -181,6 +182,74 @@
             color: var(--white);
         }
         
+        /* Contact Section */
+        .contact {
+            background: #f9f9f9;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--zeynel-white);
+            padding: 2.5rem;
+            border: 2px solid var(--border-light);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+        
+        .form-group label span {
+            color: var(--zeynel-red);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-light);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--zeynel-red);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            text-align: center;
+        }
+        
+        .form-submit .btn {
+            min-width: 200px;
+        }
+        
         /* Footer */
         .footer {
             padding: 60px 20px 40px;
@@ -243,6 +312,14 @@
             
             .location-button {
                 width: 100%;
+            }
+            
+            .sube-map {
+                height: 200px;
+            }
+            
+            .contact-form {
+                padding: 1rem;
             }
         }
     </style>
