@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -18,27 +18,19 @@
         }
         
         :root {
-            --bg-dark: #14100e;
-            --gold: #c4a574;
-            --gold-hover: #d4b584;
-            --text-light: #f5f1ed;
-            --text-muted: #c4bdb5;
-            --card-bg: #1f1814;
+            --brand-red: #EF4444;
+            --white: #ffffff;
+            --off-white: #f9fafb;
+            --light-red: #fef2f2;
         }
         
         body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--white);
+            color: #1f2937;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            line-height: 1.2;
         }
         
         .container {
@@ -49,160 +41,159 @@
         
         /* Hero Section */
         .hero {
-            min-height: 90vh;
+            background-color: var(--brand-red);
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 60px 20px;
-            background: 
-                radial-gradient(ellipse at top, rgba(196, 165, 116, 0.1) 0%, transparent 60%),
-                var(--bg-dark);
+            padding: 80px 20px;
         }
         
-        .hero-title {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 0.5rem;
-            color: var(--gold);
-            letter-spacing: -0.02em;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-        
-        .hero-year {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            color: var(--text-muted);
+        .hero-logo {
+            max-width: 500px;
+            width: 90%;
+            height: auto;
             margin-bottom: 3rem;
-            letter-spacing: 0.1em;
+        }
+        
+        .hero-tagline {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--white);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
         }
         
         .cta-button {
             display: inline-block;
-            padding: 16px 40px;
-            background-color: var(--gold);
-            color: var(--bg-dark);
+            padding: 18px 45px;
+            background-color: var(--white);
+            color: var(--brand-red);
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
-            border-radius: 2px;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            letter-spacing: 0.02em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
         .cta-button:hover {
-            background-color: var(--gold-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(196, 165, 116, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
         /* Locations Section */
         .locations {
             padding: 80px 20px;
+            background-color: var(--off-white);
         }
         
         .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2rem, 5vw, 2.75rem);
             text-align: center;
             margin-bottom: 3rem;
-            color: var(--gold);
+            color: var(--brand-red);
+            font-weight: 700;
         }
         
         .locations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .location-card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(196, 165, 116, 0.2);
-            padding: 2rem;
-            border-radius: 4px;
+            background-color: var(--white);
+            border: 2px solid #e5e7eb;
+            padding: 2.5rem;
+            border-radius: 12px;
             transition: all 0.3s ease;
         }
         
         .location-card:hover {
-            border-color: var(--gold);
+            border-color: var(--brand-red);
             transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.12);
         }
         
         .location-name {
-            font-size: 1.8rem;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            color: var(--brand-red);
+            margin-bottom: 1.75rem;
+            font-weight: 700;
         }
         
         .location-info {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
         
         .location-info strong {
             display: block;
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            color: #6b7280;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.3rem;
-            font-weight: 500;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+        
+        .location-info p {
+            color: #1f2937;
         }
         
         .location-info a {
-            color: var(--text-light);
+            color: #1f2937;
             text-decoration: none;
             transition: color 0.2s ease;
         }
         
         .location-info a:hover {
-            color: var(--gold);
+            color: var(--brand-red);
         }
         
         .location-actions {
             display: flex;
             gap: 1rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             flex-wrap: wrap;
         }
         
         .location-button {
             flex: 1;
-            min-width: 120px;
-            padding: 12px 20px;
+            min-width: 130px;
+            padding: 14px 24px;
             text-align: center;
             text-decoration: none;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            border-radius: 2px;
-            font-weight: 500;
-            font-size: 0.9rem;
+            border: 2px solid var(--brand-red);
+            color: var(--brand-red);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
         }
         
         .location-button:hover {
-            background-color: var(--gold);
-            color: var(--bg-dark);
+            background-color: var(--brand-red);
+            color: var(--white);
         }
         
         /* Footer */
         .footer {
             padding: 60px 20px 40px;
             text-align: center;
-            border-top: 1px solid rgba(196, 165, 116, 0.2);
+            background-color: var(--white);
+            border-top: 1px solid #e5e7eb;
         }
         
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--gold);
+        .footer-logo-text {
+            font-size: 1.5rem;
+            color: var(--brand-red);
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         
         .footer-contact {
@@ -210,29 +201,40 @@
         }
         
         .footer-contact a {
-            color: var(--text-muted);
+            color: #6b7280;
             text-decoration: none;
             transition: color 0.2s ease;
+            font-size: 1rem;
         }
         
         .footer-contact a:hover {
-            color: var(--gold);
+            color: var(--brand-red);
         }
         
         .footer-text {
-            color: var(--text-muted);
+            color: #9ca3af;
             font-size: 0.9rem;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                min-height: 85vh;
-                padding: 40px 20px;
+                min-height: 80vh;
+                padding: 60px 20px;
+            }
+            
+            .hero-logo {
+                max-width: 350px;
+                margin-bottom: 2.5rem;
             }
             
             .locations {
                 padding: 60px 20px;
+            }
+            
+            .locations-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
             .location-actions {
@@ -322,12 +324,9 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">Zeynel Köftecisi</h1>
-            <p class="hero-subtitle">İnegöl Köfte Geleneği</p>
-            <p class="hero-year">1961'DEN BERİ</p>
-            <a href="https://zeynelmenu.com" class="cta-button" target="_blank" rel="noopener">Menüyü Gör</a>
-        </div>
+        <img src="zeynel-logo.jpg" alt="Zeynel İnegöl Köftecisi - 3. Kuşak" class="hero-logo">
+        <p class="hero-tagline">İnegöl Köfte Geleneği • 1961'den Beri</p>
+        <a href="https://zeynelmenu.com" class="cta-button" target="_blank" rel="noopener">Menüyü Gör</a>
     </section>
     
     <!-- Locations Section -->
@@ -383,7 +382,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <h2 class="footer-logo">Zeynel İnegöl Köftecisi</h2>
+            <h2 class="footer-logo-text">Zeynel İnegöl Köftecisi</h2>
             <div class="footer-contact">
                 <a href="mailto:zeynel@zeynelkofte.com">zeynel@zeynelkofte.com</a>
             </div>
