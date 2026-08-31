@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeynel İnegöl Köftecisi | 1961'den Beri Lezzet</title>
+    <title>Zeynel İnegöl Köftecisi | 1961'den Beri Bursa'nın Lezzet Durağı</title>
     <meta name="description" content="Zeynel İnegöl Köftecisi - 1961'den beri İnegöl köfte geleneğini sürdüren aile işletmesi. Bursa'da iki lokasyonumuz: Kayhan Çarşı ve Mobilium AVM.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zeynelkofte.com/">
+    <meta property="og:title" content="Zeynel İnegöl Köftecisi | 1961'den Beri Bursa'nın Lezzet Durağı">
+    <meta property="og:description" content="1961'den beri İnegöl köftesinin adresi. 3. kuşak aile işletmesi.">
+    <meta property="og:image" content="https://zeynelkofte.com/img/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zeynelkofte.com/">
+    <meta property="twitter:title" content="Zeynel İnegöl Köftecisi | 1961'den Beri Bursa'nın Lezzet Durağı">
+    <meta property="twitter:description" content="1961'den beri İnegöl köftesinin adresi. 3. kuşak aile işletmesi.">
+    <meta property="twitter:image" content="https://zeynelkofte.com/img/og-image.jpg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Restaurant Guru 2026 Badge -->
+    <link rel="stylesheet" href="https://awards.infcdn.net/2024/badge-circledLeaves27.css">
     
     <style>
         * {
@@ -18,19 +35,27 @@
         }
         
         :root {
-            --brand-red: #EF4444;
+            --zeynel-red: #E32E2C;
             --white: #ffffff;
             --off-white: #f9fafb;
-            --light-red: #fef2f2;
+            --light-gray: #f3f4f6;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-light: #e5e7eb;
         }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--white);
-            color: #1f2937;
+            color: var(--text-dark);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.03em;
         }
         
         .container {
@@ -39,177 +64,381 @@
             padding: 0 20px;
         }
         
+        section {
+            padding: 80px 20px;
+        }
+        
         /* Hero Section */
         .hero {
-            background-color: var(--brand-red);
-            min-height: 85vh;
+            background-color: var(--zeynel-red);
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
+            position: relative;
         }
         
-        /* For when actual logo image is added */
         .hero-logo {
-            max-width: 500px;
+            max-width: 600px;
             width: 90%;
             height: auto;
             margin-bottom: 3rem;
+            filter: brightness(0) invert(1);
         }
         
         .hero-tagline {
-            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
             color: var(--white);
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             font-weight: 400;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.02em;
+            max-width: 800px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
         .cta-button {
             display: inline-block;
             padding: 18px 45px;
             background-color: var(--white);
-            color: var(--brand-red);
+            color: var(--zeynel-red);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
             border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
         }
         
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
         
-        /* Locations Section */
-        .locations {
-            padding: 80px 20px;
-            background-color: var(--off-white);
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .cta-button.secondary:hover {
+            background-color: var(--white);
+            color: var(--zeynel-red);
+        }
+        
+        /* Tarihçe Section */
+        .tarihce {
+            background-color: var(--white);
         }
         
         .section-title {
-            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             text-align: center;
             margin-bottom: 3rem;
-            color: var(--brand-red);
-            font-weight: 700;
+            color: var(--zeynel-red);
+        }
+        
+        .tarihce-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        .tarihce-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .quote-block {
+            background-color: var(--light-gray);
+            border-left: 5px solid var(--zeynel-red);
+            padding: 2rem 2.5rem;
+            margin: 3rem 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 1.7;
+        }
+        
+        .quote-author {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--zeynel-red);
+            font-size: 1rem;
+        }
+        
+        /* Şubeler Section */
+        .subeler {
+            background-color: var(--off-white);
         }
         
         .locations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .location-card {
             background-color: var(--white);
-            border: 2px solid #e5e7eb;
-            padding: 2.5rem;
+            border: 2px solid var(--border-light);
             border-radius: 12px;
+            overflow: hidden;
             transition: all 0.3s ease;
         }
         
         .location-card:hover {
-            border-color: var(--brand-red);
+            border-color: var(--zeynel-red);
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.12);
+            box-shadow: 0 12px 32px rgba(227, 46, 44, 0.15);
+        }
+        
+        .location-header {
+            background-color: var(--zeynel-red);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
         }
         
         .location-name {
-            font-size: 1.75rem;
-            color: var(--brand-red);
-            margin-bottom: 1.75rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-rating {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        .location-body {
+            padding: 2rem;
         }
         
         .location-info {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
         
         .location-info strong {
             display: block;
-            color: #6b7280;
-            font-size: 0.8rem;
+            color: var(--text-gray);
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.4rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
             font-weight: 600;
         }
         
         .location-info p {
-            color: #1f2937;
+            color: var(--text-dark);
+            font-size: 1.05rem;
         }
         
         .location-info a {
-            color: #1f2937;
+            color: var(--text-dark);
             text-decoration: none;
             transition: color 0.2s ease;
         }
         
         .location-info a:hover {
-            color: var(--brand-red);
+            color: var(--zeynel-red);
+        }
+        
+        .location-map {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
         
         .location-actions {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
-            flex-wrap: wrap;
         }
         
         .location-button {
             flex: 1;
-            min-width: 130px;
             padding: 14px 24px;
             text-align: center;
             text-decoration: none;
-            border: 2px solid var(--brand-red);
-            color: var(--brand-red);
+            border: 2px solid var(--zeynel-red);
+            color: var(--zeynel-red);
             border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 1rem;
             transition: all 0.3s ease;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
         }
         
         .location-button:hover {
-            background-color: var(--brand-red);
+            background-color: var(--zeynel-red);
             color: var(--white);
+        }
+        
+        /* Galeri Section */
+        .galeri {
+            background-color: var(--white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 4/3;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Yorumlar Section */
+        .yorumlar {
+            background-color: var(--off-white);
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .review-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-light);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .review-stars {
+            color: #FFA500;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-text {
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .review-author {
+            font-weight: 600;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        .review-source {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--zeynel-red);
+            font-weight: 600;
+        }
+        
+        /* Restaurant Guru Badge */
+        .awards-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        /* Instagram Section */
+        .instagram {
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .instagram-intro {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+        
+        .instagram-handle {
+            color: var(--zeynel-red);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .instagram-embed {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         /* Contact Section */
         .contact {
-            background: #f9f9f9;
+            background-color: var(--off-white);
         }
         
         .contact-intro {
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 3rem;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-gray);
         }
         
         .contact-form {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
-            background: var(--zeynel-white);
-            padding: 2.5rem;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
             border: 2px solid var(--border-light);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-weight: 600;
             color: var(--text-dark);
             font-size: 1rem;
@@ -223,8 +452,9 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 0.75rem 1rem;
+            padding: 0.9rem 1.2rem;
             border: 2px solid var(--border-light);
+            border-radius: 8px;
             font-size: 1rem;
             font-family: inherit;
             transition: border-color 0.3s ease;
@@ -238,7 +468,7 @@
         }
         
         .form-group textarea {
-            min-height: 120px;
+            min-height: 140px;
             resize: vertical;
         }
         
@@ -246,59 +476,101 @@
             text-align: center;
         }
         
-        .form-submit .btn {
-            min-width: 200px;
+        .btn-submit {
+            padding: 16px 60px;
+            background-color: var(--zeynel-red);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        
+        .btn-submit:hover {
+            background-color: #c22723;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(227, 46, 44, 0.3);
         }
         
         /* Footer */
         .footer {
             padding: 60px 20px 40px;
             text-align: center;
-            background-color: var(--white);
-            border-top: 1px solid #e5e7eb;
+            background-color: var(--text-dark);
+            color: var(--white);
         }
         
         .footer-logo-text {
-            font-size: 1.5rem;
-            color: var(--brand-red);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .footer-contact {
+            font-size: 2.5rem;
+            color: var(--white);
             margin-bottom: 1.5rem;
         }
         
+        .footer-contact {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
         .footer-contact a {
-            color: #6b7280;
+            color: var(--white);
             text-decoration: none;
             transition: color 0.2s ease;
-            font-size: 1rem;
+            display: block;
+            margin: 0.5rem 0;
         }
         
         .footer-contact a:hover {
-            color: var(--brand-red);
+            color: var(--zeynel-red);
+        }
+        
+        .footer-social {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-social a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .footer-social a:hover {
+            color: var(--zeynel-red);
         }
         
         .footer-text {
             color: #9ca3af;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                min-height: 80vh;
+            section {
                 padding: 60px 20px;
+            }
+            
+            .hero {
+                min-height: 85vh;
+                padding: 80px 20px;
             }
             
             .hero-logo {
-                max-width: 350px;
+                max-width: 400px;
                 margin-bottom: 2.5rem;
             }
             
-            .locations {
-                padding: 60px 20px;
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
             }
             
             .locations-grid {
@@ -314,12 +586,25 @@
                 width: 100%;
             }
             
-            .sube-map {
-                height: 200px;
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .instagram-grid {
+                grid-template-columns: 1fr;
             }
             
             .contact-form {
-                padding: 1rem;
+                padding: 2rem 1.5rem;
+            }
+            
+            .quote-block {
+                padding: 1.5rem;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -329,13 +614,13 @@
     {
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "name": "Zeynel Köfte Kayhan Çarşı",
-        "image": "https://zeynelkofte.com/og-image.jpg",
+        "name": "Zeynel İnegöl Köftecisi - Kayhan Çarşı",
+        "image": "https://zeynelkofte.com/img/og-image.jpg",
         "telephone": "+905405201616",
         "email": "zeynel@zeynelkofte.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Kayıhan, Kayhan Cd. No: 15",
+            "streetAddress": "Kayhan Cd. No:15",
             "addressLocality": "Osmangazi",
             "addressRegion": "Bursa",
             "postalCode": "16230",
@@ -350,7 +635,11 @@
         "menu": "https://zeynelmenu.com",
         "servesCuisine": "Turkish",
         "priceRange": "$$",
-        "openingHours": "Mo-Su",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "116"
+        },
         "foundingDate": "1961"
     }
     </script>
@@ -360,14 +649,14 @@
     {
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "name": "Zeynel İnegöl Köftecisi",
-        "image": "https://zeynelkofte.com/og-image.jpg",
+        "name": "Zeynel İnegöl Köftecisi - Mobilium AVM",
+        "image": "https://zeynelkofte.com/img/og-image.jpg",
         "telephone": "+902247141516",
         "email": "zeynel@zeynelkofte.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Yeniceköy, İnegöl Bursa Karayolu 6.km, Mobilium AVM",
-            "addressLocality": "İnegöl",
+            "streetAddress": "İnegöl Bursa Karayolu 6.km, Mobilium AVM",
+            "addressLocality": "Yeniceköy",
             "addressRegion": "Bursa",
             "addressCountry": "TR"
         },
@@ -401,58 +690,260 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <img src="zeynel-logo.jpg" alt="Zeynel İnegöl Köftecisi - 3. Kuşak" class="hero-logo">
-        <p class="hero-tagline">İnegöl Köfte Geleneği • 1961'den Beri</p>
-        <a href="https://zeynelmenu.com" class="cta-button" target="_blank" rel="noopener">Menüyü Gör</a>
+        <img src="img/zeynel-wordmark.png" alt="Zeynel İnegöl Köftecisi" class="hero-logo">
+        <p class="hero-tagline">1961'den Beri İnegöl Köftesinin Adresi</p>
+        <div class="hero-cta">
+            <a href="https://zeynelmenu.com" class="cta-button" target="_blank" rel="noopener">Menü</a>
+            <a href="https://www.instagram.com/zeynelkofte/" class="cta-button secondary" target="_blank" rel="noopener">Instagram</a>
+        </div>
     </section>
     
-    <!-- Locations Section -->
-    <section class="locations">
+    <!-- Tarihçe Section -->
+    <section class="tarihce">
         <div class="container">
-            <h2 class="section-title">Lokasyonlarımız</h2>
+            <h2 class="section-title">Tarihçemiz</h2>
+            <div class="tarihce-content">
+                <p>Zeynel İnegöl Köftecisi, 1961 yılından bu yana İnegöl köftesinin geleneğini Bursa'da sürdürmektedir. Kurucumuz Zeynel Organ tarafından başlatılan bu lezzet yolculuğu, bugün 3. kuşak olarak devam etmektedir.</p>
+                
+                <p>İnegöl köftesinin sırrı, kaliteli dana etinin özenle hazırlanması ve geleneksel pişirme tekniklerinde gizlidir. Yılların deneyimi ve tutkusuyla hazırlanan her köfte, ailemizin bu işe olan bağlılığının bir yansımasıdır.</p>
+                
+                <div class="quote-block">
+                    "İşin sırrını soruyorlar, 'bir köfteye adanmış yaklaşık 50 yıl' diyoruz."
+                    <span class="quote-author">— Zeynel Organ, 2006</span>
+                </div>
+                
+                <p>Bugün Bursa'nın iki önemli noktasında, Kayhan Çarşı ve Mobilium AVM'de hizmet vermekten gurur duyuyoruz. Her lokasyonumuzda aynı kalite, aynı lezzet ve aynı misafirperverlik ile sizlere hizmet vermeye devam ediyoruz.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Şubeler Section -->
+    <section class="subeler">
+        <div class="container">
+            <h2 class="section-title">Şubelerimiz</h2>
             <div class="locations-grid">
                 <!-- Kayhan Çarşı -->
                 <article class="location-card">
-                    <h3 class="location-name">Kayhan Çarşı</h3>
-                    <div class="location-info">
-                        <strong>Adres</strong>
-                        <p>Kayıhan, Kayhan Cd. No: 15<br>16230 Osmangazi/Bursa</p>
+                    <div class="location-header">
+                        <h3 class="location-name">Kayhan Çarşı</h3>
+                        <div class="location-rating">⭐ 4,5 · 116 yorum</div>
                     </div>
-                    <div class="location-info">
-                        <strong>Telefon</strong>
-                        <p><a href="tel:+905405201616">+90 540 520 16 16</a></p>
-                    </div>
-                    <div class="location-info">
-                        <strong>Çalışma Saatleri</strong>
-                        <p>Akşam 22:00'ye kadar</p>
-                    </div>
-                    <div class="location-actions">
-                        <a href="tel:+905405201616" class="location-button">Ara</a>
-                        <a href="https://maps.app.goo.gl/MwQN2yuhPx5YEDrL9" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
+                    <div class="location-body">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.8359642856784!2d29.063014!3d40.181700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e57bba70001%3A0x9e8e4e4e4e4e4e4e!2sKayhan%20Cd.%20No%3A15%2C%2016230%20Osmangazi%2FBursa!5e0!3m2!1str!2str!4v1234567890"
+                            class="location-map"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="location-info">
+                            <strong>Adres</strong>
+                            <p>Kayhan Cd. No:15<br>Osmangazi/Bursa</p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Telefon</strong>
+                            <p><a href="tel:+905405201616">0540 520 16 16</a></p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Çalışma Saatleri</strong>
+                            <p>Akşam 22:00'ye kadar</p>
+                        </div>
+                        <div class="location-actions">
+                            <a href="tel:+905405201616" class="location-button">Ara</a>
+                            <a href="https://maps.app.goo.gl/MwQN2yuhPx5YEDrL9" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
+                        </div>
                     </div>
                 </article>
                 
                 <!-- Mobilium AVM -->
                 <article class="location-card">
-                    <h3 class="location-name">Mobilium AVM</h3>
-                    <div class="location-info">
-                        <strong>Adres</strong>
-                        <p>Yeniceköy, İnegöl Bursa Karayolu 6.km<br>Mobilium AVM, İnegöl/Bursa</p>
+                    <div class="location-header">
+                        <h3 class="location-name">Mobilium AVM</h3>
+                        <div class="location-rating">İnegöl Şubemiz</div>
                     </div>
-                    <div class="location-info">
-                        <strong>Telefon</strong>
-                        <p><a href="tel:+902247141516">+90 224 714 15 16</a></p>
-                    </div>
-                    <div class="location-info">
-                        <strong>Çalışma Saatleri</strong>
-                        <p>09:00–23:00</p>
-                    </div>
-                    <div class="location-actions">
-                        <a href="tel:+902247141516" class="location-button">Ara</a>
-                        <a href="https://www.google.com/maps/place/Zeynel+%C4%B0neg%C3%B6l+K%C3%B6ftecisi/@40.1182105,29.4443197,17z" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
+                    <div class="location-body">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.8359642856784!2d29.444319!3d40.118210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e57bba70001%3A0x9e8e4e4e4e4e4e4e!2sMobilium%20AVM!5e0!3m2!1str!2str!4v1234567890"
+                            class="location-map"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="location-info">
+                            <strong>Adres</strong>
+                            <p>İnegöl Bursa Karayolu 6.km<br>Yeniceköy, Mobilium AVM</p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Telefon</strong>
+                            <p><a href="tel:+902247141516">0224 714 15 16</a></p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Çalışma Saatleri</strong>
+                            <p>09:00 – 23:00</p>
+                        </div>
+                        <div class="location-actions">
+                            <a href="tel:+902247141516" class="location-button">Ara</a>
+                            <a href="https://www.google.com/maps/place/Zeynel+%C4%B0neg%C3%B6l+K%C3%B6ftecisi/@40.1182105,29.4443197,17z" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
+                        </div>
                     </div>
                 </article>
             </div>
+        </div>
+    </section>
+    
+    <!-- Galeri Section -->
+    <section class="galeri">
+        <div class="container">
+            <h2 class="section-title">Galeri</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/gallery-01.jpg" alt="Zeynel İnegöl Köftecisi" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-02.jpg" alt="İnegöl Köfte" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-03.jpg" alt="Zeynel Köfte" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-04.jpg" alt="Köfte Sunumu" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-05.jpg" alt="Restaurant İçi" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-06.jpg" alt="Zeynel İnegöl" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-07.jpg" alt="Lezzet" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-08.jpg" alt="Bursa Köfte" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/gallery-09.jpg" alt="İnegöl Köftecisi" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Yorumlar Section -->
+    <section class="yorumlar">
+        <div class="container">
+            <h2 class="section-title">Müşteri Yorumları</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Bursa'ya her geldiğimde mutlaka uğradığım bir yer. Köfteler harika, hizmet mükemmel. Ailecek favorimiz.</p>
+                    <p class="review-author">serhan</p>
+                    <span class="review-source">Google</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Yıllardır gittiğim tek adres. Lezzet hiç değişmemiş, hep aynı kalite. Tebrikler.</p>
+                    <p class="review-author">Ayten</p>
+                    <span class="review-source">Google</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Gerçek İnegöl köftesinin tadını buradan alabilirsiniz. Kesinlikle tavsiye ediyorum.</p>
+                    <p class="review-author">Havva</p>
+                    <span class="review-source">Google</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Kayhan'da en sevdiğim mekan. Köfteler muhteşem, personel çok ilgili.</p>
+                    <p class="review-author">Naime</p>
+                    <span class="review-source">Google</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Mobilium'a her geldiğimde mutlaka uğruyorum. Lezzet garantili!</p>
+                    <p class="review-author">Büşra Eymir</p>
+                    <span class="review-source">Google - Mobilium</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">İnegöl'de en iyi köfte burada. Tavsiye ederim.</p>
+                    <p class="review-author">Mustafa Koca</p>
+                    <span class="review-source">Google - Mobilium</span>
+                </div>
+            </div>
+            
+            <!-- Restaurant Guru 2026 Badge -->
+            <div class="awards-section">
+                <a href="https://restaurantguru.com/Zeynel-Inegol-Koftecisi-Inegol-4" target="_blank" rel="noopener" class="b-circledLeaves27--light b-circledLeaves27--2026"></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instagram Section -->
+    <section class="instagram">
+        <div class="container">
+            <h2 class="section-title">Instagram</h2>
+            <p class="instagram-intro">
+                Bizi Instagram'da takip edin: <a href="https://www.instagram.com/zeynelkofte/" class="instagram-handle" target="_blank" rel="noopener">@zeynelkofte</a>
+            </p>
+            <div class="instagram-grid">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Db6Vw2Zufcr/" data-instgrm-version="14"></blockquote>
+                
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbbKKFys5Vf/" data-instgrm-version="14"></blockquote>
+                
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbOVmc_Mzgk/" data-instgrm-version="14"></blockquote>
+                
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Da0g3-aKeCt/" data-instgrm-version="14"></blockquote>
+                
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DPJRA2CiGRP/" data-instgrm-version="14"></blockquote>
+                
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPB5eI-jN0K/" data-instgrm-version="14"></blockquote>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Bize Ulaşın</h2>
+            <p class="contact-intro">
+                Sorularınız, önerileriniz veya rezervasyon talepleriniz için bizimle iletişime geçin.
+            </p>
+            <form class="contact-form" action="https://formsubmit.co/zeynel@zeynelkofte.com" method="POST">
+                <!-- Hidden Fields -->
+                <input type="hidden" name="_subject" value="zeynelkofte.com iletişim">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label for="name">Ad Soyad <span>*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefon <span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="branch">Şube <span>*</span></label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Şube seçiniz</option>
+                        <option value="Kayhan Çarşı">Kayhan Çarşı</option>
+                        <option value="Mobilium AVM">Mobilium AVM</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mesajınız <span>*</span></label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="btn-submit">Gönder</button>
+                </div>
+            </form>
         </div>
     </section>
     
@@ -462,9 +953,17 @@
             <h2 class="footer-logo-text">Zeynel İnegöl Köftecisi</h2>
             <div class="footer-contact">
                 <a href="mailto:zeynel@zeynelkofte.com">zeynel@zeynelkofte.com</a>
+                <a href="tel:+905405201616">0540 520 16 16</a> · 
+                <a href="tel:+902247141516">0224 714 15 16</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/zeynelkofte/" target="_blank" rel="noopener">@zeynelkofte</a>
             </div>
             <p class="footer-text">&copy; 2026 Zeynel İnegöl Köftecisi. 1961'den beri lezzet geleneği.</p>
         </div>
     </footer>
+    
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
