@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Restaurant Guru 2026 Badge -->
-    <link rel="stylesheet" href="https://awards.infcdn.net/2024/badge-circledLeaves27.css">
+    <link href="https://awards.infcdn.net/2024/badge-circledLeaves27.css" rel="stylesheet"/>
     
     <style>
         * {
@@ -68,33 +68,33 @@
             padding: 80px 20px;
         }
         
-        /* Hero Section */
+        /* Hero Section - Full viewport, red background */
         .hero {
             background-color: var(--zeynel-red);
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 100px 20px;
+            padding: 60px 20px;
             position: relative;
         }
         
         .hero-logo {
-            max-width: 600px;
-            width: 90%;
+            max-width: min(85vw, 900px);
+            width: 100%;
             height: auto;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
         
         .hero-tagline {
-            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
             color: var(--white);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             font-weight: 400;
             letter-spacing: 0.02em;
-            max-width: 800px;
+            max-width: 700px;
         }
         
         .hero-cta {
@@ -178,9 +178,44 @@
             font-size: 1rem;
         }
         
+        /* Galeri Section - Photo-forward masonry */
+        .galeri {
+            background-color: var(--off-white);
+            padding: 60px 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            aspect-ratio: 4/5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
         /* Şubeler Section */
         .subeler {
-            background-color: var(--off-white);
+            background-color: var(--white);
         }
         
         .locations-grid {
@@ -193,22 +228,22 @@
         
         .location-card {
             background-color: var(--white);
-            border: 2px solid var(--border-light);
-            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         
         .location-card:hover {
-            border-color: var(--zeynel-red);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(227, 46, 44, 0.15);
+            box-shadow: 0 8px 24px rgba(227, 46, 44, 0.12);
+            transform: translateY(-2px);
         }
         
         .location-header {
             background-color: var(--zeynel-red);
             color: var(--white);
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             text-align: center;
         }
         
@@ -218,7 +253,7 @@
         }
         
         .location-rating {
-            font-size: 1.1rem;
+            font-size: 1rem;
             opacity: 0.95;
         }
         
@@ -259,7 +294,7 @@
             width: 100%;
             height: 300px;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             margin-bottom: 1.5rem;
         }
         
@@ -289,37 +324,6 @@
             color: var(--white);
         }
         
-        /* Galeri Section */
-        .galeri {
-            background-color: var(--white);
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            aspect-ratio: 4/3;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
         /* Yorumlar Section */
         .yorumlar {
             background-color: var(--off-white);
@@ -330,14 +334,34 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .review-card {
             background-color: var(--white);
             padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .review-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .google-icon {
+            width: 20px;
+            height: 20px;
         }
         
         .review-stars {
@@ -355,16 +379,47 @@
         
         .review-author {
             font-weight: 600;
-            color: var(--text-gray);
+            color: var(--text-dark);
             font-size: 0.95rem;
+            margin-bottom: 0.25rem;
         }
         
         .review-source {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+        
+        .reviews-footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .review-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .review-link {
             display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            padding: 12px 32px;
+            background-color: var(--white);
             color: var(--zeynel-red);
-            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid var(--zeynel-red);
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        
+        .review-link:hover {
+            background-color: var(--zeynel-red);
+            color: var(--white);
         }
         
         /* Restaurant Guru Badge */
@@ -426,8 +481,8 @@
             margin: 0 auto;
             background: var(--white);
             padding: 3rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
         }
         
@@ -553,13 +608,13 @@
             }
             
             .hero {
-                min-height: 85vh;
-                padding: 80px 20px;
+                min-height: 100vh;
+                padding: 60px 20px;
             }
             
             .hero-logo {
-                max-width: 400px;
-                margin-bottom: 2.5rem;
+                max-width: 90vw;
+                margin-bottom: 2rem;
             }
             
             .hero-cta {
@@ -689,7 +744,7 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <img src="img/zeynel-wordmark.png" alt="Zeynel İnegöl Köftecisi" class="hero-logo">
+        <img src="img/zeynel-wordmark.jpg" alt="Zeynel İnegöl Köftecisi" class="hero-logo">
         <p class="hero-tagline">1961'den Beri İnegöl Köftesinin Adresi</p>
         <div class="hero-cta">
             <a href="https://zeynelmenu.com" class="cta-button" target="_blank" rel="noopener">Menü</a>
@@ -712,78 +767,6 @@
                 </div>
                 
                 <p>Bugün Bursa'nın iki önemli noktasında, Kayhan Çarşı ve Mobilium AVM'de hizmet vermekten gurur duyuyoruz. Her lokasyonumuzda aynı kalite, aynı lezzet ve aynı misafirperverlik ile sizlere hizmet vermeye devam ediyoruz.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Şubeler Section -->
-    <section class="subeler">
-        <div class="container">
-            <h2 class="section-title">Şubelerimiz</h2>
-            <div class="locations-grid">
-                <!-- Kayhan Çarşı -->
-                <article class="location-card">
-                    <div class="location-header">
-                        <h3 class="location-name">Kayhan Çarşı</h3>
-                        <div class="location-rating">⭐ 4,5 · 116 yorum</div>
-                    </div>
-                    <div class="location-body">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.8359642856784!2d29.063014!3d40.181700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e57bba70001%3A0x9e8e4e4e4e4e4e4e!2sKayhan%20Cd.%20No%3A15%2C%2016230%20Osmangazi%2FBursa!5e0!3m2!1str!2str!4v1234567890"
-                            class="location-map"
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        <div class="location-info">
-                            <strong>Adres</strong>
-                            <p>Kayhan Cd. No:15<br>Osmangazi/Bursa</p>
-                        </div>
-                        <div class="location-info">
-                            <strong>Telefon</strong>
-                            <p><a href="tel:+905405201616">0540 520 16 16</a></p>
-                        </div>
-                        <div class="location-info">
-                            <strong>Çalışma Saatleri</strong>
-                            <p>Akşam 22:00'ye kadar</p>
-                        </div>
-                        <div class="location-actions">
-                            <a href="tel:+905405201616" class="location-button">Ara</a>
-                            <a href="https://maps.app.goo.gl/MwQN2yuhPx5YEDrL9" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Mobilium AVM -->
-                <article class="location-card">
-                    <div class="location-header">
-                        <h3 class="location-name">Mobilium AVM</h3>
-                        <div class="location-rating">İnegöl Şubemiz</div>
-                    </div>
-                    <div class="location-body">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.8359642856784!2d29.444319!3d40.118210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e57bba70001%3A0x9e8e4e4e4e4e4e4e!2sMobilium%20AVM!5e0!3m2!1str!2str!4v1234567890"
-                            class="location-map"
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        <div class="location-info">
-                            <strong>Adres</strong>
-                            <p>İnegöl Bursa Karayolu 6.km<br>Yeniceköy, Mobilium AVM</p>
-                        </div>
-                        <div class="location-info">
-                            <strong>Telefon</strong>
-                            <p><a href="tel:+902247141516">0224 714 15 16</a></p>
-                        </div>
-                        <div class="location-info">
-                            <strong>Çalışma Saatleri</strong>
-                            <p>09:00 – 23:00</p>
-                        </div>
-                        <div class="location-actions">
-                            <a href="tel:+902247141516" class="location-button">Ara</a>
-                            <a href="https://www.google.com/maps/place/Zeynel+%C4%B0neg%C3%B6l+K%C3%B6ftecisi/@40.1182105,29.4443197,17z" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
-                        </div>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
@@ -820,6 +803,78 @@
                 <div class="gallery-item">
                     <img src="img/gallery-09.jpg" alt="İnegöl Köftecisi" loading="lazy">
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Şubeler Section -->
+    <section class="subeler">
+        <div class="container">
+            <h2 class="section-title">Şubelerimiz</h2>
+            <div class="locations-grid">
+                <!-- Kayhan Çarşı -->
+                <article class="location-card">
+                    <div class="location-header">
+                        <h3 class="location-name">Kayhan Çarşı</h3>
+                        <div class="location-rating">⭐ 4,5 · 116 yorum</div>
+                    </div>
+                    <div class="location-body">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Kayhan+Cd+No+15+Osmangazi+Bursa+Zeynel&hl=tr&z=16&output=embed"
+                            class="location-map"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="location-info">
+                            <strong>Adres</strong>
+                            <p>Kayhan Cd. No:15<br>Osmangazi/Bursa</p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Telefon</strong>
+                            <p><a href="tel:+905405201616">0540 520 16 16</a></p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Çalışma Saatleri</strong>
+                            <p>Akşam 22:00'ye kadar</p>
+                        </div>
+                        <div class="location-actions">
+                            <a href="tel:+905405201616" class="location-button">Ara</a>
+                            <a href="https://maps.app.goo.gl/MwQN2yuhPx5YEDrL9" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Mobilium AVM -->
+                <article class="location-card">
+                    <div class="location-header">
+                        <h3 class="location-name">Mobilium AVM</h3>
+                        <div class="location-rating">⭐ İnegöl Lokasyonumuz</div>
+                    </div>
+                    <div class="location-body">
+                        <iframe 
+                            src="https://maps.google.com/maps?cid=7203630470763155951&hl=tr&z=16&output=embed"
+                            class="location-map"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="location-info">
+                            <strong>Adres</strong>
+                            <p>İnegöl Bursa Karayolu 6.km<br>Yeniceköy, Mobilium AVM</p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Telefon</strong>
+                            <p><a href="tel:+902247141516">0224 714 15 16</a></p>
+                        </div>
+                        <div class="location-info">
+                            <strong>Çalışma Saatleri</strong>
+                            <p>09:00 – 23:00</p>
+                        </div>
+                        <div class="location-actions">
+                            <a href="tel:+902247141516" class="location-button">Ara</a>
+                            <a href="https://www.google.com/maps/place/Zeynel+%C4%B0neg%C3%B6l+K%C3%B6ftecisi/@40.1182105,29.4443197,17z" class="location-button" target="_blank" rel="noopener">Yol Tarifi</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -872,9 +927,20 @@
                 </div>
             </div>
             
+            <div class="reviews-footer">
+                <div class="review-links">
+                    <a href="https://maps.app.goo.gl/MwQN2yuhPx5YEDrL9" class="review-link" target="_blank" rel="noopener">Google'da Kayhan Yorumları</a>
+                    <a href="https://www.google.com/maps/place/Zeynel+%C4%B0neg%C3%B6l+K%C3%B6ftecisi/@40.1182105,29.4443197,17z" class="review-link" target="_blank" rel="noopener">Google'da Mobilium Yorumları</a>
+                </div>
+            </div>
+            
             <!-- Restaurant Guru 2026 Badge -->
             <div class="awards-section">
-                <a href="https://restaurantguru.com/Zeynel-Inegol-Koftecisi-Inegol-4" target="_blank" rel="noopener" class="b-circledLeaves27--light b-circledLeaves27--2026"></a>
+                <a id="b-circledLeaves27" target="_blank" rel="noopener" href="https://restaurantguru.com/Zeynel-Inegol-Koftecisi-Inegol-4" class="b-circledLeaves27--light b-circledLeaves27--2026">
+                    <span class="b-circledLeaves27__title">Recommended</span>
+                    <span class="b-circledLeaves27__separator"></span>
+                    <span class="b-circledLeaves27__name">Zeynel İnegöl Köftecisi</span>
+                </a>
             </div>
         </div>
     </section>
@@ -910,7 +976,6 @@
                 Sorularınız, önerileriniz veya rezervasyon talepleriniz için bizimle iletişime geçin.
             </p>
             <form class="contact-form" action="https://formsubmit.co/zeynel@zeynelkofte.com" method="POST">
-                <!-- Hidden Fields -->
                 <input type="hidden" name="_subject" value="zeynelkofte.com iletişim">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
