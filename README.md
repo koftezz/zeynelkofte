@@ -23,7 +23,7 @@ Official website for Zeynel İnegöl Köftecisi - Traditional İnegöl köfte re
 
 ## Menu
 
-Digital menu available at: https://zeynelmenu.com
+Digital menu for Mobilium AVM location: https://menucebimde.com/?menuid=0LKC7M
 
 ## DNS Setup (GoDaddy)
 
