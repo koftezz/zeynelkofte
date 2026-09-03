@@ -22,7 +22,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Fraunces:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
     
     <!-- Restaurant Guru 2026 Badge -->
     <link href="https://awards.infcdn.net/2024/badge-circledLeaves27.css" rel="stylesheet"/>
@@ -37,25 +37,26 @@
         :root {
             --zeynel-red: #E32E2C;
             --white: #ffffff;
-            --off-white: #f9fafb;
-            --light-gray: #f3f4f6;
-            --text-dark: #1f2937;
-            --text-gray: #6b7280;
-            --border-light: #e5e7eb;
+            --cream: #FAF8F5;
+            --paper: #F5F1E8;
+            --warm-gray: #8B8680;
+            --text-dark: #2d2a26;
+            --border-subtle: #e8e3db;
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--white);
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--cream);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.05em;
+            font-weight: 400;
         }
         
         .container {
@@ -68,7 +69,7 @@
             padding: 80px 20px;
         }
         
-        /* Hero Section - Full viewport, red background */
+        /* Hero Section - Simple red field with logo and Instagram */
         .hero {
             background-color: var(--zeynel-red);
             min-height: 100vh;
@@ -82,75 +83,63 @@
         }
         
         .hero-logo {
-            max-width: min(70vw, 480px);
+            max-width: min(80vw, 560px);
             width: 100%;
             height: auto;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
         
         .hero-tagline {
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            font-family: 'Lato', sans-serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             color: var(--white);
             margin-bottom: 2.5rem;
             font-weight: 400;
-            letter-spacing: 0.02em;
-            max-width: 700px;
+            letter-spacing: 0.04em;
         }
         
         .hero-cta {
             display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            gap: 1rem;
             justify-content: center;
         }
         
         .cta-button {
             display: inline-block;
-            padding: 18px 45px;
-            background-color: var(--white);
-            color: var(--zeynel-red);
+            padding: 16px 48px;
+            background-color: transparent;
+            color: var(--white);
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-size: 1.15rem;
+            border: 2px solid var(--white);
+            transition: all 0.25s ease;
             font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cta-button.secondary {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-        
-        .cta-button.secondary:hover {
             background-color: var(--white);
             color: var(--zeynel-red);
         }
         
-        /* Tarihçe Section */
+        /* Tarihçe Section - Editorial typography */
         .tarihce {
             background-color: var(--white);
         }
         
         .section-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.8rem, 7vw, 5rem);
             text-align: center;
             margin-bottom: 3rem;
             color: var(--zeynel-red);
+            font-weight: 400;
         }
         
         .tarihce-content {
-            max-width: 900px;
+            max-width: 760px;
             margin: 0 auto;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: var(--text-dark);
         }
@@ -160,124 +149,164 @@
         }
         
         .quote-block {
-            background-color: var(--light-gray);
-            border-left: 5px solid var(--zeynel-red);
-            padding: 2rem 2.5rem;
+            background-color: var(--cream);
+            border-left: 3px solid var(--zeynel-red);
+            padding: 2.5rem 2rem 2.5rem 2.5rem;
             margin: 3rem 0;
+            font-family: 'Fraunces', Georgia, serif;
             font-style: italic;
-            font-size: 1.25rem;
-            line-height: 1.7;
+            font-size: 1.35rem;
+            line-height: 1.65;
+            color: var(--text-dark);
         }
         
         .quote-author {
             display: block;
-            margin-top: 1rem;
+            margin-top: 1.2rem;
             font-style: normal;
-            font-weight: 600;
-            color: var(--zeynel-red);
+            font-weight: 500;
+            color: var(--warm-gray);
             font-size: 1rem;
+            font-family: 'Lato', sans-serif;
         }
         
-        /* Galeri Section - Photo-forward masonry */
+        /* Galeri Section - Photo-forward editorial layout */
         .galeri {
-            background-color: var(--off-white);
-            padding: 60px 0;
+            background-color: var(--paper);
+            padding: 80px 0;
         }
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
         
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 4px;
-            aspect-ratio: 4/5;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
         
-        .gallery-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        .gallery-item:nth-child(1) {
+            grid-column: span 7;
+            aspect-ratio: 5/4;
+        }
+        
+        .gallery-item:nth-child(2) {
+            grid-column: span 5;
+            aspect-ratio: 4/5;
+        }
+        
+        .gallery-item:nth-child(3) {
+            grid-column: span 5;
+            aspect-ratio: 4/5;
+        }
+        
+        .gallery-item:nth-child(4) {
+            grid-column: span 7;
+            aspect-ratio: 3/2;
+        }
+        
+        .gallery-item:nth-child(5) {
+            grid-column: span 6;
+            aspect-ratio: 1/1;
+        }
+        
+        .gallery-item:nth-child(6) {
+            grid-column: span 6;
+            aspect-ratio: 1/1;
+        }
+        
+        .gallery-item:nth-child(7) {
+            grid-column: span 12;
+            aspect-ratio: 21/9;
+        }
+        
+        .gallery-item:nth-child(8) {
+            grid-column: span 6;
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item:nth-child(9) {
+            grid-column: span 6;
+            aspect-ratio: 4/3;
         }
         
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
         
-        /* Şubeler Section */
+        /* Şubeler Section - Storefront plaque style */
         .subeler {
             background-color: var(--white);
+            padding: 80px 20px;
         }
         
         .locations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 4rem;
             max-width: 1100px;
-            margin: 0 auto;
+            margin: 3rem auto 0;
         }
         
         .location-card {
-            background-color: var(--white);
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-        
-        .location-card:hover {
-            box-shadow: 0 8px 24px rgba(227, 46, 44, 0.12);
-            transform: translateY(-2px);
+            background-color: var(--cream);
+            border: 1px solid var(--border-subtle);
+            overflow: visible;
+            position: relative;
         }
         
         .location-header {
-            background-color: var(--zeynel-red);
+            background-color: var(--text-dark);
             color: var(--white);
-            padding: 1.5rem 2rem;
+            padding: 2rem;
             text-align: center;
+            border-bottom: 4px solid var(--zeynel-red);
         }
         
         .location-name {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.06em;
         }
         
         .location-rating {
-            font-size: 1rem;
-            opacity: 0.95;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 0.02em;
         }
         
         .location-body {
-            padding: 2rem;
+            padding: 2.5rem 2rem;
         }
         
         .location-info {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
         
         .location-info strong {
             display: block;
-            color: var(--text-gray);
-            font-size: 0.85rem;
+            color: var(--warm-gray);
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
         }
         
         .location-info p {
             color: var(--text-dark);
             font-size: 1.05rem;
+            line-height: 1.6;
         }
         
         .location-info a {
@@ -292,10 +321,9 @@
         
         .location-map {
             width: 100%;
-            height: 300px;
-            border: none;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
+            height: 280px;
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 2rem;
         }
         
         .location-actions {
@@ -306,89 +334,76 @@
         
         .location-button {
             flex: 1;
-            padding: 14px 24px;
+            padding: 14px 20px;
             text-align: center;
             text-decoration: none;
-            border: 2px solid var(--zeynel-red);
-            color: var(--zeynel-red);
-            border-radius: 8px;
+            border: 2px solid var(--text-dark);
+            color: var(--text-dark);
             font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            font-size: 1.05rem;
+            transition: all 0.2s ease;
             font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
+            background-color: transparent;
         }
         
         .location-button:hover {
-            background-color: var(--zeynel-red);
+            background-color: var(--text-dark);
             color: var(--white);
         }
         
-        /* Yorumlar Section */
+        /* Yorumlar Section - Guest book strip style */
         .yorumlar {
-            background-color: var(--off-white);
+            background-color: var(--paper);
+            padding: 80px 20px;
         }
         
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+        .reviews-container {
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
-        .review-card {
+        .review-strip {
             background-color: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-light);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            transition: box-shadow 0.3s ease;
-        }
-        
-        .review-card:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 1.5rem;
+            padding: 2rem 2.5rem;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
         
         .review-header {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .google-icon {
-            width: 20px;
-            height: 20px;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
         }
         
         .review-stars {
             color: #FFA500;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .review-author {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+        
+        .review-source {
+            color: var(--warm-gray);
+            font-size: 0.85rem;
+            margin-left: auto;
+            font-weight: 400;
         }
         
         .review-text {
             color: var(--text-dark);
             line-height: 1.7;
-            margin-bottom: 1rem;
             font-size: 1.05rem;
-        }
-        
-        .review-author {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        .review-source {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-gray);
-            font-weight: 500;
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
         }
         
         .reviews-footer {
@@ -406,19 +421,18 @@
         .review-link {
             display: inline-block;
             padding: 12px 32px;
-            background-color: var(--white);
-            color: var(--zeynel-red);
+            background-color: transparent;
+            color: var(--text-dark);
             text-decoration: none;
-            border: 2px solid var(--zeynel-red);
-            border-radius: 8px;
+            border: 2px solid var(--text-dark);
             font-weight: 700;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
         }
         
         .review-link:hover {
-            background-color: var(--zeynel-red);
+            background-color: var(--text-dark);
             color: var(--white);
         }
         
@@ -435,8 +449,8 @@
         }
         
         .instagram-intro {
-            font-size: 1.2rem;
-            color: var(--text-gray);
+            font-size: 1.15rem;
+            color: var(--warm-gray);
             margin-bottom: 3rem;
         }
         
@@ -465,15 +479,15 @@
         
         /* Contact Section */
         .contact {
-            background-color: var(--off-white);
+            background-color: var(--paper);
         }
         
         .contact-intro {
             text-align: center;
             max-width: 700px;
             margin: 0 auto 3rem;
-            font-size: 1.15rem;
-            color: var(--text-gray);
+            font-size: 1.1rem;
+            color: var(--warm-gray);
         }
         
         .contact-form {
@@ -481,8 +495,7 @@
             margin: 0 auto;
             background: var(--white);
             padding: 3rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border-subtle);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
         }
         
@@ -493,9 +506,9 @@
         .form-group label {
             display: block;
             margin-bottom: 0.6rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-dark);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
         
         .form-group label span {
@@ -507,11 +520,11 @@
         .form-group textarea {
             width: 100%;
             padding: 0.9rem 1.2rem;
-            border: 2px solid var(--border-light);
-            border-radius: 8px;
+            border: 2px solid var(--border-subtle);
             font-size: 1rem;
             font-family: inherit;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.2s ease;
+            background-color: var(--cream);
         }
         
         .form-group input:focus,
@@ -535,19 +548,16 @@
             background-color: var(--zeynel-red);
             color: var(--white);
             border: none;
-            border-radius: 8px;
             font-size: 1.2rem;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
         }
         
         .btn-submit:hover {
             background-color: #c22723;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(227, 46, 44, 0.3);
         }
         
         /* Footer */
@@ -559,22 +569,23 @@
         }
         
         .footer-logo-text {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--white);
             margin-bottom: 1.5rem;
+            letter-spacing: 0.08em;
         }
         
         .footer-contact {
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
         
         .footer-contact a {
             color: var(--white);
             text-decoration: none;
             transition: color 0.2s ease;
-            display: block;
-            margin: 0.5rem 0;
+            display: inline-block;
+            margin: 0.5rem 0.5rem;
         }
         
         .footer-contact a:hover {
@@ -614,22 +625,37 @@
             
             .hero-logo {
                 max-width: 90vw;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem;
                 margin-bottom: 2rem;
             }
             
-            .hero-cta {
-                flex-direction: column;
-                gap: 1rem;
+            .cta-button {
+                padding: 14px 40px;
+                font-size: 1.1rem;
             }
             
-            .cta-button {
-                width: 100%;
-                max-width: 300px;
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .gallery-item {
+                grid-column: span 1 !important;
+                aspect-ratio: 4/3 !important;
             }
             
             .locations-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 2.5rem;
             }
             
             .location-actions {
@@ -640,12 +666,18 @@
                 width: 100%;
             }
             
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .review-strip {
+                padding: 1.5rem;
             }
             
-            .reviews-grid {
-                grid-template-columns: 1fr;
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .review-source {
+                margin-left: 0;
             }
             
             .instagram-grid {
@@ -657,8 +689,8 @@
             }
             
             .quote-block {
-                padding: 1.5rem;
-                font-size: 1.1rem;
+                padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+                font-size: 1.15rem;
             }
         }
     </style>
@@ -743,10 +775,10 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <img src="img/zeynel-logo.jpg" alt="Zeynel İnegöl Köftecisi" class="hero-logo">
+        <img src="img/zeynel-wordmark.jpg" alt="Zeynel İnegöl Köftecisi" class="hero-logo">
         <p class="hero-tagline">1961'den Beri İnegöl Köftesinin Adresi</p>
         <div class="hero-cta">
-            <a href="https://www.instagram.com/zeynelkofte/" class="cta-button secondary" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.instagram.com/zeynelkofte/" class="cta-button" target="_blank" rel="noopener">Instagram'da Takip Et</a>
         </div>
     </section>
     
@@ -882,47 +914,59 @@
     <section class="yorumlar">
         <div class="container">
             <h2 class="section-title">Müşteri Yorumları</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <div class="reviews-container">
+                <div class="review-strip">
+                    <div class="review-header">
+                        <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="review-author">serhan</span>
+                        <span class="review-source">Google</span>
+                    </div>
                     <p class="review-text">Yılların verdiği güven ve lezzet, Kayhan'da da aynen devam ediyor. Her zaman ilk tercih Zeynel.</p>
-                    <p class="review-author">serhan</p>
-                    <span class="review-source">Google</span>
                 </div>
                 
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-strip">
+                    <div class="review-header">
+                        <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="review-author">Ayten</span>
+                        <span class="review-source">Google</span>
+                    </div>
                     <p class="review-text">Pideli kofte yedik. O kadar lezzetliydi ki, hem cebinize uygun hem agiz tadimiza uygun. Calisanlarin hizmeti, yemeklerin lezzeti efsaneydi.</p>
-                    <p class="review-author">Ayten</p>
-                    <span class="review-source">Google</span>
                 </div>
                 
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-strip">
+                    <div class="review-header">
+                        <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="review-author">Havva</span>
+                        <span class="review-source">Google</span>
+                    </div>
                     <p class="review-text">Çok güzel bir mekan. Kesinlikle gelmelisiniz. Pideli köftesi gerçekten çok lezzetliydi. Hizmet çok iyiydi. İkram olarak süt helvası, çay ve türk kahvesi veriliyor.</p>
-                    <p class="review-author">Havva</p>
-                    <span class="review-source">Google</span>
                 </div>
                 
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-strip">
+                    <div class="review-header">
+                        <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="review-author">Naime</span>
+                        <span class="review-source">Google</span>
+                    </div>
                     <p class="review-text">Gelen yemekler çok lezzetliydi. İkramlar olsun ana yemeğin kendisi olsun ayrı ayrı özenilmişti. Çalışanlar çok ilgili ve hızlıydı. Bursa'ya geliceklere kesinlikle önerimdir.</p>
-                    <p class="review-author">Naime</p>
-                    <span class="review-source">Google</span>
                 </div>
                 
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-strip">
+                    <div class="review-header">
+                        <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="review-author">Büşra Eymir</span>
+                        <span class="review-source">Google - Mobilium</span>
+                    </div>
                     <p class="review-text">Mobilyumun yanında bulunan zeynel köfteye yol üstü geçerken iftar için uğradık hayal edemeyeceğiniz kadar lezzetli idi fiyat performansı çok iyiydi…</p>
-                    <p class="review-author">Büşra Eymir</p>
-                    <span class="review-source">Google - Mobilium</span>
                 </div>
                 
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-strip">
+                    <div class="review-header">
+                        <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="review-author">Mustafa Koca</span>
+                        <span class="review-source">Google - Mobilium</span>
+                    </div>
                     <p class="review-text">Karşılama ve hizmet gayet güzeldi. Köftelerin tadı çok güzel ve porsiyonları yeterliydi.</p>
-                    <p class="review-author">Mustafa Koca</p>
-                    <span class="review-source">Google - Mobilium</span>
                 </div>
             </div>
             
