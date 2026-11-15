@@ -1,0 +1,828 @@
+/* Zeynel İnegöl Köftecisi - Premium Restaurant Website Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --zeynel-red: #E32E2C;
+    --white: #ffffff;
+    --cream: #FAF8F5;
+    --paper: #F5F1E8;
+    --warm-gray: #8B8680;
+    --text-dark: #2d2a26;
+    --border-subtle: #e8e3db;
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--zeynel-red);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.hero-logo {
+    max-width: min(80vw, 560px);
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.hero-tagline {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--white);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 48px;
+    background-color: transparent;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border: 2px solid var(--white);
+    transition: all 0.25s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.08em;
+}
+
+.cta-button:hover {
+    background-color: var(--white);
+    color: var(--zeynel-red);
+}
+
+/* Branch Hero Variant */
+.hero-branch {
+    min-height: 60vh;
+}
+
+.hero-breadcrumb {
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero-breadcrumb a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.hero-breadcrumb a:hover {
+    border-bottom-color: var(--white);
+}
+
+/* Tarihçe / Story Section */
+.tarihce {
+    background-color: var(--white);
+}
+
+.section-title {
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--zeynel-red);
+    font-weight: 400;
+}
+
+.tarihce-content {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.tarihce-content p {
+    margin-bottom: 1.5rem;
+}
+
+.quote-block {
+    background-color: var(--cream);
+    border-left: 3px solid var(--zeynel-red);
+    padding: 2.5rem 2rem 2.5rem 2.5rem;
+    margin: 3rem 0;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.65;
+    color: var(--text-dark);
+}
+
+.quote-author {
+    display: block;
+    margin-top: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--warm-gray);
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Galeri Section */
+.galeri {
+    background-color: var(--paper);
+    padding: 80px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item:nth-child(1) {
+    grid-column: span 7;
+    aspect-ratio: 5/4;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: span 5;
+    aspect-ratio: 4/5;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: span 5;
+    aspect-ratio: 4/5;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: span 7;
+    aspect-ratio: 3/2;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: span 6;
+    aspect-ratio: 1/1;
+}
+
+.gallery-item:nth-child(6) {
+    grid-column: span 6;
+    aspect-ratio: 1/1;
+}
+
+.gallery-item:nth-child(7) {
+    grid-column: span 12;
+    aspect-ratio: 21/9;
+}
+
+.gallery-item:nth-child(8) {
+    grid-column: span 6;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item:nth-child(9) {
+    grid-column: span 6;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Şubeler / Branches Section */
+.subeler {
+    background-color: var(--white);
+    padding: 80px 20px;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 3rem auto 0;
+}
+
+.location-card {
+    background-color: var(--cream);
+    border: 1px solid var(--border-subtle);
+    overflow: visible;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.location-header {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--zeynel-red);
+}
+
+.location-name {
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.06em;
+}
+
+.location-rating {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.location-body {
+    padding: 2.5rem 2rem;
+}
+
+.location-info {
+    margin-bottom: 1.75rem;
+}
+
+.location-info strong {
+    display: block;
+    color: var(--warm-gray);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.location-info p {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.location-info a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.location-info a:hover {
+    color: var(--zeynel-red);
+}
+
+.location-map {
+    width: 100%;
+    height: 280px;
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 2rem;
+}
+
+.location-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.location-button {
+    flex: 1;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--text-dark);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
+    background-color: transparent;
+}
+
+.location-button:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+/* Branch Details Page Specific */
+.branch-details {
+    background-color: var(--white);
+    padding: 80px 20px;
+}
+
+.branch-main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.branch-hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Yorumlar / Reviews Section */
+.yorumlar {
+    background-color: var(--paper);
+    padding: 80px 20px;
+}
+
+.reviews-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.review-strip {
+    background-color: var(--white);
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 1.5rem;
+    padding: 2rem 2.5rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.review-stars {
+    color: #FFA500;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.review-author {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.review-source {
+    color: var(--warm-gray);
+    font-size: 0.85rem;
+    margin-left: auto;
+    font-weight: 400;
+}
+
+.review-text {
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+}
+
+.reviews-footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.review-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review-link {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: transparent;
+    color: var(--text-dark);
+    text-decoration: none;
+    border: 2px solid var(--text-dark);
+    font-weight: 700;
+    transition: all 0.2s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.review-link:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+/* Awards Section */
+.awards-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: var(--white);
+    padding: 80px 20px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    background-color: var(--cream);
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 1.5rem;
+    padding: 2rem 2.5rem;
+}
+
+.faq-question {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--zeynel-red);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.04em;
+}
+
+.faq-answer {
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.faq-answer a {
+    color: var(--zeynel-red);
+    text-decoration: none;
+    border-bottom: 1px solid var(--zeynel-red);
+}
+
+.faq-answer a:hover {
+    opacity: 0.8;
+}
+
+/* Instagram Section */
+.instagram {
+    background-color: var(--white);
+    text-align: center;
+}
+
+.instagram-intro {
+    font-size: 1.15rem;
+    color: var(--warm-gray);
+    margin-bottom: 3rem;
+}
+
+.instagram-handle {
+    color: var(--zeynel-red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instagram-embed {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--paper);
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: var(--warm-gray);
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group label span {
+    color: var(--zeynel-red);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid var(--border-subtle);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    background-color: var(--cream);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--zeynel-red);
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.btn-submit {
+    padding: 16px 60px;
+    background-color: var(--zeynel-red);
+    color: var(--white);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.btn-submit:hover {
+    background-color: #c22723;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 20px 40px;
+    text-align: center;
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+.footer-logo-text {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+}
+
+.footer-contact {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.footer-contact a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin: 0.5rem 0.5rem;
+}
+
+.footer-contact a:hover {
+    color: var(--zeynel-red);
+}
+
+.footer-social {
+    margin-bottom: 2rem;
+}
+
+.footer-social a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.footer-social a:hover {
+    color: var(--zeynel-red);
+}
+
+.footer-text {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+/* Mobile Bottom Bar */
+.mobile-bottom-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--text-dark);
+    border-top: 3px solid var(--zeynel-red);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.mobile-bottom-bar-content {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mobile-bar-button {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--zeynel-red);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.mobile-bar-button:hover {
+    background-color: #c22723;
+}
+
+/* 404 Page */
+.error-page {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--cream);
+}
+
+.error-code {
+    font-size: clamp(4rem, 15vw, 8rem);
+    color: var(--zeynel-red);
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 20px;
+    }
+    
+    .hero {
+        min-height: 100vh;
+        padding: 60px 20px;
+    }
+    
+    .hero-logo {
+        max-width: 90vw;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+        padding: 14px 40px;
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2.8rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .gallery-item {
+        grid-column: span 1 !important;
+        aspect-ratio: 4/3 !important;
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .location-actions {
+        flex-direction: column;
+    }
+    
+    .location-button {
+        width: 100%;
+    }
+    
+    .review-strip {
+        padding: 1.5rem;
+    }
+    
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .review-source {
+        margin-left: 0;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .quote-block {
+        padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+        font-size: 1.15rem;
+    }
+    
+    .mobile-bottom-bar {
+        display: block;
+    }
+    
+    body {
+        padding-bottom: 70px;
+    }
+}
